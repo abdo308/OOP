@@ -20,6 +20,21 @@ void Distance::setdistance(int f, float i)
     feet = f;
     inches = i;
 }
+Distance Distance::add_object(Distance d2)
+{
+    Distance res;
+    res.feet = feet + d2.feet;
+    res.inches = inches + d2.inches;
+    return res;
+}
+int Distance::get_feet()
+{
+    return feet;
+}
+float Distance::get_inches()
+{
+    return inches;
+}
 Distance::~Distance()
 {
 }
