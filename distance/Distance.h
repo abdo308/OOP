@@ -13,7 +13,12 @@ public:
     void setdistance(int f, float i);
     int get_feet();
     float get_inches();
-
+    Distance operator+(Distance d2)
+    {
+        int f = feet + d2.feet;
+        float i = inches + d2.inches;
+        return Distance(f, i);
+    };
     ~Distance();
 
 private:
